@@ -69,10 +69,12 @@
     font-weight: 900;
     margin-left: calc(5rem / 10);
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .head div:nth-child(4) {
     font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
 .head div:nth-child(2n) {
