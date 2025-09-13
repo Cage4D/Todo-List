@@ -1,4 +1,4 @@
-export { Todo, TodoStorage, createTaskElements };
+export { Todo, TodoStorage, createTaskElements, Project };
 import TrashIcon from "../svg/Trash.svg"
 import ArrowIcon from "../svg/Arrow.svg"
 
@@ -83,5 +83,21 @@ class Todo {
 
   getTasks() {
     this.storage.getAll();
+  }
+}
+
+class Project {
+  constructor(name) {
+    this.name = name;
+    this.uid = crypto.randomUUID()
+    this.storage = []
+  }
+
+  add(todo) {
+    this.storage.push(todo)
+  }
+
+  getAll() {
+    return [...this.storage]
   }
 }
