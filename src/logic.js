@@ -1,15 +1,17 @@
 export { Todo, TodoStorage, createTaskElements };
+import TrashIcon from "../svg/Trash.svg"
+import ArrowIcon from "../svg/Arrow.svg"
 
 function createTaskElements() {
   const input = createElement("input");
   input.type = "checkbox";
 
   const del = createElement("img");
-  del.src = "./svg/Trash.svg";
+  del.src = TrashIcon;
   del.classList.add("deleteBtn");
 
   const dropDown = createElement("img");
-  dropDown.src = "./svg/Arrow.svg";
+  dropDown.src = ArrowIcon;
   dropDown.classList.add("dropDown");
 
   return { input, del, dropDown };
