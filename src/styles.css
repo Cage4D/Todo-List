@@ -7,6 +7,17 @@
     --gray-background: #F0F0F0;
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/roboto-variablefont_wdthwght-webfont.woff2) format("woff2"),
+         url(../fonts/roboto-variablefont_wdthwght-webfont.woff) format("woff");
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
