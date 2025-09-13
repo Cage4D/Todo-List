@@ -68,6 +68,7 @@
     color: var(--plus);
     font-weight: 900;
     margin-left: calc(5rem / 10);
+    cursor: pointer;
 }
 
 .head div:nth-child(4) {
