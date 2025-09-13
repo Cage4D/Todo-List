@@ -5,6 +5,8 @@
 
 :root {
     --gray-background: #F0F0F0;
+    --project: #213CEA;
+    --plus: #FFFFFF;
 }
 
 @font-face {
@@ -39,15 +41,11 @@
 /*HEAD*/
 
 .head {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    align-items: center;
 }
 
-.top {
-    display: flex;
-    align-items: center;
-    gap: calc(50vw * 0.02);
-}
 
 #dp {
     width: clamp(2.2rem, 3rem, 3.5rem);
@@ -55,4 +53,34 @@
     border-radius: 50%;
 }
 
+.head div:nth-child(2) {
+    font-size: 1.2rem;
+}
 
+.head div:nth-child(3) {
+    width: clamp(1.5rem, 2rem, 2.5rem);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--project);
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: var(--plus);
+    font-weight: 900;
+    margin-left: calc(5rem / 10);
+}
+
+.head div:nth-child(4) {
+    font-size: 0.9rem;
+}
+
+.head div:nth-child(2n) {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+.head div:last-child {
+    grid-column: 1 / span 2;
+    border-bottom: 0.2px solid black;
+    opacity: 0.2;
+}
