@@ -49,3 +49,31 @@ class Task {
 
   checked() {}
 }
+
+class Todo {
+  constructor(name, storage, createElements) {
+    this.name = name;
+    this.storage = storage;
+    this.createElements = createElements;
+  }
+
+  createTask(taskName, dueDate, priorityLevel, description = null) {
+    const task = new Task(
+      taskName,
+      dueDate,
+      priorityLevel,
+      description,
+      this.createElements
+    );
+    this.storage.add(task);
+    return task;
+  }
+
+  deleteTask(UID) {
+    this.storage.deleteByUID(UID);
+  }
+
+  getTasks() {
+    this.storage.getAll();
+  }
+}
