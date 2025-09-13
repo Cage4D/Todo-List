@@ -13,3 +13,17 @@ function createTaskElements() {
   return { input, del, dropDown };
 }
 
+class TodoStorage {
+  constructor() {
+    this.tasks = [];
+  }
+  add(task) {
+    this.tasks.push(task);
+  }
+  deleteByUID(UID) {
+    this.tasks = this.tasks.filter((task) => task.uid !== UID);
+  }
+  getAll() {
+    return [...this.tasks];
+  }
+}
