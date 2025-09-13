@@ -27,3 +27,25 @@ class TodoStorage {
     return [...this.tasks];
   }
 }
+
+class Task {
+  constructor(
+    taskName,
+    dueDate,
+    priorityLevel,
+    description = null,
+    createElement
+  ) {
+    this.taskName = taskName;
+    this.dueDate = dueDate;
+    this.priorityLevel = priorityLevel;
+    this.description = description;
+    this.elements = createElement();
+  }
+
+  showDescription() {
+    console.log(this.description);
+  }
+
+  checked() {}
+}
