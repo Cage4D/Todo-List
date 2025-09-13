@@ -1,16 +1,22 @@
+export { Todo, TodoStorage, createTaskElements };
+
 function createTaskElements() {
   const input = createElement("input");
   input.type = "checkbox";
 
   const del = createElement("img");
-  del.src = "./svg/Trash.svg"
+  del.src = "./svg/Trash.svg";
   del.classList.add("deleteBtn");
 
   const dropDown = createElement("img");
-  dropDown.src = "./svg/Arrow.svg"
+  dropDown.src = "./svg/Arrow.svg";
   dropDown.classList.add("dropDown");
 
   return { input, del, dropDown };
+}
+
+function createElement(input) {
+  return document.createElement(input);
 }
 
 class TodoStorage {
@@ -34,13 +40,13 @@ class Task {
     dueDate,
     priorityLevel,
     description = null,
-    createElement
+    makeElements
   ) {
     this.taskName = taskName;
     this.dueDate = dueDate;
     this.priorityLevel = priorityLevel;
     this.description = description;
-    this.elements = createElement();
+    this.elements = makeElements();
   }
 
   showDescription() {
@@ -51,10 +57,10 @@ class Task {
 }
 
 class Todo {
-  constructor(name, storage, createElements) {
+  constructor(name, storage, makeElement) {
     this.name = name;
     this.storage = storage;
-    this.createElements = createElements;
+    this.makeElements = makeElement;
   }
 
   createTask(taskName, dueDate, priorityLevel, description = null) {
@@ -63,7 +69,7 @@ class Todo {
       dueDate,
       priorityLevel,
       description,
-      this.createElements
+      this.makeElements
     );
     this.storage.add(task);
     return task;
