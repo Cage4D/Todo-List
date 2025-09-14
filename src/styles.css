@@ -73,7 +73,7 @@
 }
 
 .head div:nth-child(4) {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 1rem;
 }
 
@@ -86,4 +86,65 @@
     grid-column: 1 / span 2;
     border-bottom: 0.2px solid black;
     opacity: 0.2;
+}
+
+/*PROJECTS & TODOS*/
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-top: 1rem;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 0.1rem 0rem;
+    align-items: center;
+}
+
+.project .box {
+    width: clamp(0.8rem, 1.5vw, 2vw);
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    position: relative;
+    left: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.todo .pound {
+    width: clamp(0.8rem, 1.5vw, 2vw);
+    aspect-ratio: 1 / 1;
+    color: #E30808;
+    font-size: 1.2rem;
+    font-weight: 900;
+    position: relative;
+    left: 1rem;
+}
+
+.todo {
+    display: contents;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.project .label {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    justify-self: start;
+    margin-bottom: 0.5rem;
+}
+
+.pro1 {
+    background-color: #E30808;
+}
+
+.pro2 {
+    background-color: #08EA81;
+}
+
+.pro3 {
+    background-color: #0887E3;
 }
