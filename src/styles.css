@@ -117,7 +117,7 @@
     aspect-ratio: 1 / 1;
     color: #E30808;
     font-size: 1.2rem;
-    font-weight: 900;
+    font-weight: 600;
     position: relative;
     left: 1rem;
 }
@@ -125,8 +125,12 @@
 .todo {
     display: contents;
     font-family: "Roboto", sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
+}
+
+.todolabel {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08ch;
 }
 
 .project .label {
