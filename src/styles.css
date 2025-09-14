@@ -7,6 +7,7 @@
     --gray-background: #F0F0F0;
     --project: #213CEA;
     --plus: #FFFFFF;
+    --roboto: "Roboto", sans-serif;
 }
 
 @font-face {
@@ -78,7 +79,7 @@
 }
 
 .head div:nth-child(2n) {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--roboto);
     font-weight: bold;
 }
 
@@ -124,7 +125,7 @@
 
 .todo {
     display: contents;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--roboto);
 }
 
 .todolabel {
@@ -134,7 +135,7 @@
 }
 
 .project .label {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--roboto);
     font-size: 0.9rem;
     font-weight: 600;
     justify-self: start;
