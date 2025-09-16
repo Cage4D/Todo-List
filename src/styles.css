@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 #sidebar {
@@ -180,4 +180,99 @@
     font-size: 1.05rem;
     font-weight: bold;
     color: #400CBC;
+    position: relative;
+    right: 2rem;
+}
+
+/*BODY*/
+.body {
+    display: grid;
+    padding: 1rem;
+    gap: 3rem;
+}
+
+.project-todo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.todo-items {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / span 4;
+}
+
+.title {
+    font-family: var(--inter);
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+#dropdown,
+#delete {
+    width: 1.1rem;
+    aspect-ratio: 1 / 1;
+}
+
+.title-baseline,
+.baseline {
+    border-bottom: 0.2px solid black;
+    opacity: 0.3;
+    height: 1px;
+}
+
+.svg {
+    justify-self: end;
+}
+
+.body button {
+    width: 10rem;
+    height: 25px;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: var(--inter);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.info {
+    display: flex;
+    gap: 1rem;
+}
+
+.svg {
+    position: relative;
+    right: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.todo-name {
+    white-space: nowrap;
+}
+
+.info input {
+    width: 15px;
+    height: 15px;
+}
+
+/*PRIORITY*/
+.high {
+    background-color: #F51400;
+}
+
+.medium {
+    background-color: #219DEA;
+}
+
+.low {
+    background-color: #1DD454;
 }
