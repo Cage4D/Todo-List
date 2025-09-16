@@ -159,7 +159,7 @@
 
 #main {
     display: grid;
-    grid-template-rows: 20.9% 79.1%;
+    grid-template-rows: 10% 90%;
 }
 
 .header {
@@ -264,6 +264,19 @@
     font-weight: 600;
     color: #21C552;
     font-style: italic;
+}
+
+
+.date {
+    font-family: var(--inter);
+    font-size: 12px;
+    letter-spacing: 0.13rem;
+    font-weight: bold;
+    color: #900CBC;
+}
+
+span.day {
+    color: #1DD454;
 }
 
 /*INPUT*/
