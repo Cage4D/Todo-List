@@ -260,6 +260,9 @@
 
 .todo-name {
     white-space: nowrap;
+    font-family: var(--inter);
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .add-task {
