@@ -141,6 +141,7 @@
     font-weight: 600;
     justify-self: start;
     margin-bottom: 0.5rem;
+    cursor: pointer;
 }
 
 .pro1 {
@@ -182,6 +183,7 @@
     color: #400CBC;
     position: relative;
     right: 2rem;
+    cursor: pointer;
 }
 
 /*BODY*/
@@ -228,6 +230,7 @@
 
 .svg {
     justify-self: end;
+    cursor: pointer;
 }
 
 .body button {
@@ -264,6 +267,7 @@
     font-weight: 600;
     color: #21C552;
     font-style: italic;
+    cursor: pointer;
 }
 
 
