@@ -172,12 +172,12 @@
 
 .header div:first-child {
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .header div:last-child {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: bold;
     color: #400CBC;
 }
