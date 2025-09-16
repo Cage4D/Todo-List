@@ -259,6 +259,15 @@
     white-space: nowrap;
 }
 
+.add-task {
+    font-family: var(--inter);
+    font-weight: 600;
+    color: #21C552;
+    font-style: italic;
+}
+
+/*INPUT*/
+
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
