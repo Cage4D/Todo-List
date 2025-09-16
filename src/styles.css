@@ -8,6 +8,7 @@
     --project: #213CEA;
     --plus: #FFFFFF;
     --roboto: "Roboto", sans-serif;
+    --inter: "Inter", sans-serif;
 }
 
 @font-face {
@@ -152,4 +153,31 @@
 
 .pro3 {
     background-color: #0887E3;
+}
+
+/*MAIN*/
+
+#main {
+    display: grid;
+    grid-template-rows: 20.9% 79.1%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: var(--inter);
+    padding: 1rem;
+}
+
+.header div:first-child {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.header div:last-child {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #400CBC;
 }
