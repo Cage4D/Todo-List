@@ -331,7 +331,7 @@ input[type="checkbox"]:checked::after {
     border: none;
     border-radius: 10px;
     width: 50vw;
-    height: 60vh;
+    height: 45vh;
     position: fixed;
     top: 20%;
     left: 30%;
