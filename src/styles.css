@@ -378,6 +378,12 @@ fieldset > *:not(legend) {
     font-weight: 500;
 }
 
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 #form button:hover {
     cursor: pointer;
 }
