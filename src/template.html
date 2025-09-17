@@ -15,12 +15,18 @@
                 <div>Projects</div>
                 <dialog id="modal">
                     <form id="form">
-                        <label for="proName">Project Name:</label>
-                        <input type="text" id="proName">
-                        <label for="taskName">Task: </label>
-                        <input type="text" id="taskName">
-                        <label for="dueDate">Due Date: </label>
-                        <input type="date" id="dueDate">
+                        <span>
+                            <label for="proName">Project Name:</label>
+                            <input type="text" id="proName">
+                        </span>
+                        <span>
+                            <label for="taskName">Task: </label>
+                            <input type="text" id="taskName">
+                        </span>
+                        <span>
+                            <label for="dueDate">Due Date: </label>
+                            <input type="date" id="dueDate">
+                        </span>
                         <fieldset>
                             <legend>Priority Level:</legend>
                             <label>
@@ -36,7 +42,10 @@
                                 High
                             </label>
                         </fieldset>
-                        <button type="submit">Submit</button>
+                        <span id="buttons">
+                            <button type="submit">Submit</button>
+                            <button id="closeBtn">Close</button>
+                        </span>
                     </form>
                 </dialog>
                 <div></div>
