@@ -325,3 +325,14 @@ input[type="checkbox"]:checked::after {
 .low {
     background-color: #1DD454;
 }
+
+/*DIALOG*/
+#modal {
+    border: none;
+    border-radius: 10px;
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+}
