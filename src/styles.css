@@ -346,4 +346,49 @@ input[type="checkbox"]:checked::after {
 
 #form input {
     width: 100%;
+    border-radius: 3px;
+    border: 0.4px solid black;
+}
+
+fieldset {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 6px;
+    font-family: var(--inter);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid black;
+}
+
+fieldset > *:not(legend) {
+    display: flex;
+    gap: 0.6rem;
+}
+
+#form button {
+    height: 2rem;
+    width: 10rem;
+    align-self: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #0887E3;
+    font-family: var(--inter);
+    font-weight: 500;
+}
+
+#form button:hover {
+    cursor: pointer;
+}
+
+#form span > label {
+    font-family: var(--roboto);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.07rem;
+}
+
+#form input:focus {
+    outline: none;
+    border-color: blue;
 }
