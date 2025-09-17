@@ -335,6 +335,7 @@ input[type="checkbox"]:checked::after {
     position: fixed;
     top: 20%;
     left: 30%;
+    animation: fadeIn 0.8s ease forwards;
 }
 
 #form {
@@ -391,4 +392,15 @@ fieldset > *:not(legend) {
 #form input:focus {
     outline: none;
     border-color: blue;
+    box-shadow: 0 0 2px #0047b2aa, 0 0 4px #006fff33, 0 0 6px #0051ff55;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
