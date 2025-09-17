@@ -335,10 +335,10 @@ input[type="checkbox"]:checked::after {
     position: fixed;
     top: 20%;
     left: 30%;
-    animation: fadeIn 0.8s ease forwards;
 }
 
 #modal::backdrop {
+    animation: fadeIn 0.5s forwards;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -425,6 +425,10 @@ fieldset > *:not(legend) {
     }
 }
 
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
 .fade-out {
-    animation: fadeOut 0.8s ease forwards;
+    animation: fadeOut 0.2s forwards;
 }
