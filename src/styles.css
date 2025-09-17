@@ -338,6 +338,10 @@ input[type="checkbox"]:checked::after {
     animation: fadeIn 0.8s ease forwards;
 }
 
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 #form {
     display: flex;
     flex-direction: column;
@@ -409,4 +413,18 @@ fieldset > *:not(legend) {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    } to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.8s ease forwards;
 }
