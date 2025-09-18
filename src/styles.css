@@ -113,6 +113,7 @@
     position: relative;
     left: 0.75rem;
     margin-bottom: 0.5rem;
+    background-color: #E30808;
 }
 
 .todo .pound {
@@ -216,7 +217,7 @@
     bottom: 0.5rem;
 }
 
-#dropdown,
+
 #delete {
     width: 1.1rem;
     aspect-ratio: 1 / 1;
