@@ -143,3 +143,7 @@ const mainDialog = (function () {
 
   return { dialog, addProject, proName, taskName, dueDate, priority, form, submitBtn, closeBtn }
 })();
+
+function closeModal(modal) {
+  modal.close();
+}
