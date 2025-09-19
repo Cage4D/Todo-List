@@ -181,3 +181,29 @@ function createNewObject(
   };
   return newObj;
 }
+
+function pullInfo(e) {
+  e.preventDefault();
+
+  if (mainDialog.proName.value && mainDialog.taskName.value && mainDialog.dueDate.value) {
+    mainDialog.priority.forEach((task) => {
+      if (task.checked) {
+        const proNameContent = mainDialog.proName.value;
+        const taskNameContent = mainDialog.taskName.value;
+        const dueDateContent = mainDialog.dueDate.value;
+        const priorityLvl = task.value;
+        resetModalClass(mainDialog.dialog, "submit");
+        mainDialog.form.reset();
+
+        const newObj = createNewObject(
+          proNameContent,
+          taskNameContent,
+          priorityLvl,
+          dueDateContent
+        );
+        projects.storage.push(newObj);
+        return sidebarContents(projects.storage);
+      }
+    });
+  }
+}
