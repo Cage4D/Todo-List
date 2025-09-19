@@ -1,65 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div id="sidebar">
-            <div class="head">
-                <img src="../img/saitama.jpg" alt="akatsuki" id="dp">
-                <div>Cage</div>
-                <div class="addProject">+</div>
-                <div>Projects</div>
-                <dialog id="modal">
-                    <form id="form">
-                        <span>
-                            <label for="proName">Project Name:</label>
-                            <input type="text" id="proName">
-                        </span>
-                        <span>
-                            <label for="taskName">Task: </label>
-                            <input type="text" id="taskName">
-                        </span>
-                        <span>
-                            <label for="dueDate">Due Date: </label>
-                            <input type="date" id="dueDate">
-                        </span>
-                        <fieldset>
-                            <legend>Priority Level:</legend>
-                            <label>
-                                <input type="radio" name="priority" value="low" id="priorityLow">
-                                Low
-                            </label>
-                            <label>
-                                <input type="radio" name="priority" value="medium" id="priorityMedium">
-                                Medium
-                            </label>
-                            <label>
-                                <input type="radio" name="priority" value="high" id="priorityHigh">
-                                High
-                            </label>
-                        </fieldset>
-                        <span id="buttons">
-                            <button type="submit">Submit</button>
-                            <button id="closeBtn">Close</button>
-                        </span>
-                    </form>
-                </dialog>
-                <div></div>
-            </div>
-            <div id="projects"></div>
+      <div id="sidebar">
+        <div class="head">
+          <img src="../img/saitama.jpg" alt="akatsuki" id="dp" />
+          <div>Cage</div>
+          <div class="addProject">+</div>
+          <div>Projects</div>
+          <dialog id="modal">
+            <form id="form">
+              <span>
+                <label for="proName">Project Name:</label>
+                <input type="text" id="proName" />
+              </span>
+              <span>
+                <label for="taskName">Task: </label>
+                <input type="text" id="taskName" />
+              </span>
+              <span>
+                <label for="dueDate">Due Date: </label>
+                <input type="date" id="dueDate" />
+              </span>
+              <fieldset>
+                <legend>Priority Level:</legend>
+                <label>
+                  <input
+                    type="radio"
+                    name="priority"
+                    value="low"
+                    id="priorityLow"
+                  />
+                  Low
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="priority"
+                    value="medium"
+                    id="priorityMedium"
+                  />
+                  Medium
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="priority"
+                    value="high"
+                    id="priorityHigh"
+                  />
+                  High
+                </label>
+              </fieldset>
+              <span id="buttons">
+                <button type="submit">Submit</button>
+                <button id="closeBtn">Close</button>
+              </span>
+            </form>
+          </dialog>
+          <div></div>
         </div>
-        <div id="main">
-            <div class="header">
-                <div id="projectName">Placeholder</div>
-                <div>+ Add Todo</div>
-            </div>
-            <div class="body"></div>
-            </div>
+        <div id="projects"></div>
+      </div>
+      <div id="main">
+        <div class="header">
+          <div id="projectName">TodoList</div>
+          <div></div>
         </div>
+        <div class="body"></div>
+      </div>
     </div>
-</body>
+    <dialog id="taskModal">
+      <form id="task-form">
+        <span>
+          <label for="taskName">Task: </label>
+          <input type="text" id="task-Name" />
+        </span>
+        <span>
+          <label for="dueDate">Due Date: </label>
+          <input type="date" id="task-due-Date" />
+        </span>
+        <fieldset>
+          <legend>Priority Level:</legend>
+          <label>
+            <input
+              type="radio"
+              name="priority"
+              value="low"
+              id="task-priority-Low"
+            />
+            Low
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="priority"
+              value="medium"
+              id="task-priority-Medium"
+            />
+            Medium
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="priority"
+              value="high"
+              id="task-priority-High"
+            />
+            High
+          </label>
+        </fieldset>
+        <span id="buttons">
+          <button id="task-submit" type="button">Submit</button>
+          <button id="task-close">Close</button>
+        </span>
+      </form>
+    </dialog>
+  </body>
 </html>
