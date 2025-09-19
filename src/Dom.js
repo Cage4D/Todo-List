@@ -112,3 +112,34 @@ function body(project) {
   const projectEl = createProject(project);
   body.appendChild(projectEl);
 }
+
+const mainDialog = (function () {
+  //DIALOG
+  const dialog = document.querySelector("#modal");
+  const addProject = document.querySelector(".addProject");
+
+  addProject.addEventListener("click", () => {
+    dialog.className = "";
+    dialog.classList.add("fade-in");
+    dialog.showModal();
+  });
+
+  //FORM
+  const proName = document.querySelector("#proName");
+  const taskName = document.querySelector("#taskName");
+  const dueDate = document.querySelector("#dueDate");
+  const priority = document.querySelectorAll("input[id^='priority']");
+  const form = document.querySelector("#form");
+
+  //MODAL BUTTONS
+  const submitBtn = document.querySelector("button[type='submit']");
+  submitBtn.addEventListener("click", pullInfo);
+
+  const closeBtn = document.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    resetModalClass(dialog, "");
+  });
+
+  return { dialog, addProject, proName, taskName, dueDate, priority, form, submitBtn, closeBtn }
+})();
