@@ -11,14 +11,33 @@ function createElement(tag, className, textContent) {
   return el;
 }
 
+function strikethrough(e) {
+  const checkbox = e.target
+  const id = e.target.dataset.id
+
+  const name = document.querySelector(`.todo-name[data-id="${id}"]`)
+  if (name) {
+    if (checkbox.checked) {
+      name.style.textDecoration = "line-through"
+      name.style.fontStyle = "italic"
+    } else {
+      name.style.textDecoration = "none"
+      name.style.fontStyle = "normal"
+    }
+  }
+}
+
 function createTodoItem(task) {
   const item = createElement("div", "todo-items");
 
   const info = createElement("div", "info");
   const checkbox = createElement("input");
   checkbox.type = "checkbox";
+  checkbox.addEventListener("click", strikethrough)
+  checkbox.dataset.id = task.id
 
   const name = createElement("span", "todo-name", task.name);
+  name.dataset.id = task.id
   info.append(checkbox, name);
 
   const btnTextContent = btnPriority(task.priority);
