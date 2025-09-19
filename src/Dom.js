@@ -238,3 +238,29 @@ del.addEventListener("click", (e) => {
     });
   }
 });
+
+// TASK FORM
+function taskPull(e) {
+  e.preventDefault();
+  if (appendTask.taskName.value && appendTask.dueDate.value) {
+    appendTask.priority.forEach((task) => {
+      if (task.checked) {
+        const taskNameContent = appendTask.taskName.value;
+        const dueDateContent = appendTask.dueDate.value;
+        const priorityLvl = task.value;
+        resetModalClass(appendTask.taskModal, "submit");
+        appendTask.form.reset();
+
+        const obj = {
+          name: taskNameContent,
+          priority: priorityLvl,
+          date: dueDateContent,
+          id: crypto.randomUUID(),
+        };
+        currentProject.tasks.push(obj);
+        body(currentProject);
+        sidebarContents(projects.storage);
+      }
+    });
+  }
+}
