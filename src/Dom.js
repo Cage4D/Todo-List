@@ -10,3 +10,29 @@ function createElement(tag, className, textContent) {
 
   return el;
 }
+
+function createTodoItem(task) {
+  const item = createElement("div", "todo-items");
+
+  const info = createElement("div", "info");
+  const checkbox = createElement("input");
+  checkbox.type = "checkbox";
+
+  const name = createElement("span", "todo-name", task.name);
+  info.append(checkbox, name);
+
+  const btnTextContent = btnPriority(task.priority);
+  const button = createElement("button", task.priority, btnTextContent);
+  const date = createElement("span", "date", task.date);
+
+  const svg = createElement("div", "svg");
+
+  const trashImg = createElement("img");
+  trashImg.src = TrashIcon;
+  trashImg.id = "delete";
+  trashImg.dataset.id = task.id;
+  svg.append(trashImg);
+
+  item.append(info, button, date, svg);
+  return item;
+}
