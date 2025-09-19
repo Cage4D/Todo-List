@@ -74,3 +74,8 @@ function createProject(project) {
 
   return projectDiv;
 }
+
+function randomColorGenerator(array) {
+  const num = Math.floor(Math.random() * array.length)
+  return array[num]
+}
