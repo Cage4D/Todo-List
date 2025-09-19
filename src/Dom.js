@@ -207,3 +207,18 @@ function pullInfo(e) {
     });
   }
 }
+
+sidebarContents(projects.storage);
+
+const projectSet = (function () {
+  const proSet = document.querySelector("#projects");
+  proSet.addEventListener("click", (e) => {
+    if (e.target && e.target.classList.contains("label")) {
+      const index = projects.storage.findIndex(
+        (item) => item.title === e.target.textContent
+      );
+      currentProject = projects.storage[index];
+      body(currentProject);
+    }
+  });
+})();
