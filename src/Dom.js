@@ -79,3 +79,29 @@ function randomColorGenerator(array) {
   const num = Math.floor(Math.random() * array.length)
   return array[num]
 }
+
+function sidebarContents(projects) {
+  const pro = document.querySelector("#projects");
+  pro.innerHTML = "";
+
+  projects.forEach((project) => {
+    const projectContainer = createElement("div", "project");
+
+    const box = createElement("div", "box");
+    box.style.backgroundColor = randomColorGenerator(colorArray)
+
+    const label = createElement("div", "label");
+    label.textContent = project.title;
+
+    const task = createElement("div", "todo");
+    project.tasks.forEach((tk) => {
+      const pound = createElement("div", "pound", "#");
+      pound.style.color = randomColorGenerator(colorArray)
+      const taskLabel = createElement("div", "todolabel", tk.name);
+      task.append(pound, taskLabel);
+    });
+    projectContainer.append(box, label, task);
+    pro.append(projectContainer);
+  });
+  return pro;
+}
