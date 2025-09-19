@@ -105,3 +105,10 @@ function sidebarContents(projects) {
   });
   return pro;
 }
+
+function body(project) {
+  const body = document.querySelector(".body");
+  body.innerHTML = "";
+  const projectEl = createProject(project);
+  body.appendChild(projectEl);
+}
