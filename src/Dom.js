@@ -222,3 +222,19 @@ const projectSet = (function () {
     }
   });
 })();
+
+const del = document.querySelector(".container");
+del.addEventListener("click", (e) => {
+  if (e.target && e.target.id === "delete") {
+    projects.storage.forEach((project) => {
+      const index = project.tasks.findIndex((item) => {
+        return item.id === e.target.dataset.id;
+      });
+      if (index !== -1) {
+        project.tasks.splice(index, 1);
+        body(currentProject);
+        sidebarContents(projects.storage);
+      }
+    });
+  }
+});
