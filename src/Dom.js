@@ -147,3 +147,17 @@ const mainDialog = (function () {
 function closeModal(modal) {
   modal.close();
 }
+
+function resetModalClass(modal, btn) {
+  modal.className = "";
+  modal.classList.add("fade-out");
+  if (btn === "submit") {
+    setTimeout(() => {
+      closeModal(modal);
+    }, 800);
+  } else {
+    setTimeout(() => {
+      closeModal(modal);
+    }, 300);
+  }
+}
