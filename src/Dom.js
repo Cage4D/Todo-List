@@ -36,3 +36,15 @@ function createTodoItem(task) {
   item.append(info, button, date, svg);
   return item;
 }
+
+function btnPriority(value) {
+  let btnContent;
+  if (value === "high") {
+    btnContent = "HIGH PRIORITY";
+  } else if (value === "medium") {
+    btnContent = "MEDIUM PRIORITY";
+  } else {
+    btnContent = "LOW PRIORITY";
+  }
+  return btnContent;
+}
