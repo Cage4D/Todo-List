@@ -264,3 +264,19 @@ function taskPull(e) {
     });
   }
 }
+
+const appendTask = (function () {
+  const form = document.querySelector("#task-form");
+  const taskModal = document.querySelector("#taskModal");
+  const taskName = document.querySelector("#task-Name");
+  const dueDate = document.querySelector("#task-due-Date");
+  const priority = document.querySelectorAll("input[id^='task-priority-']");
+  const submit = document.querySelector("#task-submit");
+  submit.addEventListener("click", taskPull);
+  const close = document.querySelector("#task-close");
+  close.addEventListener("click", (e) => {
+    e.preventDefault();
+    resetModalClass(taskModal, "");
+  });
+  return { form, taskName, dueDate, priority, submit, close, taskModal };
+})();
