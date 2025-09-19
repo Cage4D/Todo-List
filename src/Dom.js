@@ -161,3 +161,23 @@ function resetModalClass(modal, btn) {
     }, 300);
   }
 }
+
+function createNewObject(
+  proNameContent,
+  taskNameContent,
+  priorityLvl,
+  dueDateContent
+) {
+  const newObj = {
+    title: proNameContent,
+    tasks: [
+      {
+        name: taskNameContent,
+        priority: priorityLvl,
+        date: dueDateContent,
+        id: crypto.randomUUID(),
+      },
+    ],
+  };
+  return newObj;
+}
