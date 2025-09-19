@@ -48,3 +48,29 @@ function btnPriority(value) {
   }
   return btnContent;
 }
+
+function createProject(project) {
+  const projectDiv = createElement("div", "project-todo");
+
+  const title = createElement("div", "title", project.title);
+  projectDiv.append(title);
+
+  project.tasks.forEach((task) => {
+    const baseline = createElement("div", "baseline");
+    const todoItem = createTodoItem(task);
+
+    projectDiv.append(baseline, todoItem);
+  });
+
+  const addTask = createElement("div", "add-task", "+ Add task");
+  const taskModal = document.querySelector("#taskModal");
+
+  addTask.addEventListener("click", () => {
+    taskModal.className = "";
+    taskModal.classList.add(".fade-in");
+    taskModal.showModal();
+  });
+  projectDiv.append(addTask);
+
+  return projectDiv;
+}
